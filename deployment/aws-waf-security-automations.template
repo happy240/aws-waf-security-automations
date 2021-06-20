@@ -313,7 +313,7 @@ Resources:
     DependsOn: CheckRequirements
     Properties:
       TemplateURL: !Sub
-        - 'https://${S3Bucket}.s3.amazonaws.com/${KeyPrefix}/aws-waf-security-automations-firehose-athena.template'
+        - 'https://${S3Bucket}.s3.${AWS::Region}.amazonaws.com.cn/${KeyPrefix}/aws-waf-security-automations-firehose-athena.template'
         -
           S3Bucket: !FindInMap ["SourceCode", "General", "TemplateBucket"]
           KeyPrefix: !FindInMap ["SourceCode", "General", "KeyPrefix"]
@@ -336,7 +336,7 @@ Resources:
     DependsOn: CheckRequirements
     Properties:
       TemplateURL: !Sub
-        - 'https://${S3Bucket}.s3.amazonaws.com/${KeyPrefix}/aws-waf-security-automations-webacl.template'
+        - 'https://${S3Bucket}.s3.${AWS::Region}.amazonaws.com.cn/${KeyPrefix}/aws-waf-security-automations-webacl.template'
         -
           S3Bucket: !FindInMap ["SourceCode", "General", "TemplateBucket"]
           KeyPrefix: !FindInMap ["SourceCode", "General", "KeyPrefix"]
@@ -1723,7 +1723,7 @@ Resources:
 Outputs:
   BadBotHoneypotEndpoint:
     Description: Bad Bot Honeypot Endpoint
-    Value: !Sub 'https://${ApiGatewayBadBot}.execute-api.${AWS::Region}.amazonaws.com/${ApiGatewayBadBotStage}'
+    Value: !Sub 'https://${ApiGatewayBadBot}.execute-api.${AWS::Region}.amazonaws.com.cn/${ApiGatewayBadBotStage}'
     Condition: BadBotProtectionActivated
 
   WAFWebACL:
