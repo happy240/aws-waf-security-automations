@@ -1413,7 +1413,12 @@ Resources:
       Description: >-
         API created by AWS WAF Security Automation CloudFormation template. This endpoint will be
         used to capture bad bots.
-
+      Parameters:
+        endpointConfigurationTypes: REGIONAL
+      EndpointConfiguration:
+        Types:
+        - REGIONAL
+        
   ApiGatewayBadBotResource:
     Type: 'AWS::ApiGateway::Resource'
     Condition: BadBotProtectionActivated
