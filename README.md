@@ -1,4 +1,4 @@
-# AWS WAF Security Automations
+# AWS WAF Security Automations for CN partition
 A solution that contains all AWS WAF samples developed so far - waf-reactive-blacklist, waf-bad-bot-blocking, waf-block-bad-behaving and waf-reputation-lists.
 
 For the full solution overview visit [AWS WAF Security Automations](https://aws.amazon.com/answers/security/aws-waf-security-automations/).
